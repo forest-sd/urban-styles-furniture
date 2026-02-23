@@ -137,7 +137,8 @@ section .subtitle { color: var(--text-light); font-size: 1.1rem; margin-bottom: 
   text-decoration: none;
 }
 .link-card:hover { border-color: var(--primary); box-shadow: 0 4px 12px rgba(226,114,91,0.12); transform: translateY(-1px); }
-.link-card .platform { font-weight: 700; color: var(--dark); font-size: 1rem; margin-bottom: 4px; }
+.link-card .platform { font-weight: 700; color: var(--dark); font-size: 1rem; margin-bottom: 4px; display: flex; align-items: center; gap: 8px; }
+.link-card .platform .ico { font-size: 1.3rem; }
 .link-card .desc { color: var(--text-light); font-size: 0.88rem; line-height: 1.4; }
 .link-card .url { color: var(--primary); font-size: 0.78rem; margin-top: 6px; display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
