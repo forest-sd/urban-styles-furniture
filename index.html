@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Urban Styles Furniture | Brand Hub</title>
+<meta name="description" content="Urban Styles Furniture - Fast. Stylish. Comfort When You Want It Most. Modern furniture, stylish home décor, and dependable support in Indianapolis, IN.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://furniture-store.shopurbanstyles.com/">
+<style>
+:root {
+  --primary: #1a1a2e;
+  --accent: #e2725b;
+  --accent-light: #f0a08c;
+  --warm: #f5f0eb;
+  --text: #2c2c2c;
+  --text-light: #6b6b6b;
+  --white: #ffffff;
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; color: var(--text); line-height: 1.7; background: var(--warm); }
+
+/* Hero */
+.hero {
+  background: linear-gradient(135deg, var(--primary) 0%, #16213e 50%, #0f3460 100%);
+  color: var(--white);
+  text-align: center;
+  padding: 80px 24px 70px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at 30% 70%, rgba(226,114,91,0.15) 0%, transparent 50%),
+              radial-gradient(circle at 70% 30%, rgba(226,114,91,0.1) 0%, transparent 40%);
+  animation: float 20s ease-in-out infinite;
+}
+@keyframes float {
+  0%, 100% { transform: translate(0,0); }
+  50% { transform: translate(-2%,2%); }
+}
+.hero-content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; }
+.hero h1 { font-size: 3rem; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+.hero .tagline {
+  font-size: 1.25rem;
+  color: var(--accent-light);
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.hero .subtitle {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.75);
+  max-width: 600px;
+  margin: 0 auto;
+}
+.hero-cta {
+  display: inline-block;
+  margin-top: 32px;
+  padding: 14px 36px;
+  background: var(--accent);
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(226,114,91,0.4); }
+
+/* Container */
+.container { max-width: 960px; margin: 0 auto; padding: 0 24px; }
+
+/* Sections */
+section { padding: 60px 0; }
+.section-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 24px;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  margin-bottom: 32px;
+}
+.card p { color: var(--text-light); font-size: 1.05rem; }
+
+/* Mission/Vision Grid */
+.mv-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.mv-grid .card { margin-bottom: 0; }
+.mv-grid .card h3 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+/* Values */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.value-item {
+  background: var(--white);
+  border-radius: 14px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+  border-left: 4px solid var(--accent);
+  transition: transform 0.2s;
+}
+.value-item:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+.value-item h4 { color: var(--primary); font-size: 1.1rem; margin-bottom: 8px; }
+.value-item p { color: var(--text-light); font-size: 0.95rem; }
+
+/* UVP */
+.uvp-card {
+  background: linear-gradient(135deg, var(--primary), #0f3460);
+  color: var(--white);
+  border-radius: 16px;
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+}
+.uvp-card .section-title { color: var(--accent-light); }
+.uvp-card .section-title::after { background: var(--accent-light); }
+.uvp-card p { color: rgba(255,255,255,0.85); font-size: 1.1rem; }
+
+/* Products */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+.product-tag {
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px 24px;
+  text-align: center;
+  font-weight: 600;
+  color: var(--primary);
+  box-shadow: var(--shadow);
+  transition: transform 0.2s, border-color 0.2s;
+  border: 2px solid transparent;
+}
+.product-tag:hover { transform: translateY(-2px); border-color: var(--accent); }
+.product-icon { font-size: 1.6rem; margin-bottom: 8px; display: block; }
+
+/* Audience */
+.audience-list { list-style: none; padding: 0; }
+.audience-list li {
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 1.05rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.audience-list li::before { content: '→'; color: var(--accent); font-weight: 700; }
+.audience-list li:last-child { border-bottom: none; }
+
+/* Contact */
+.contact-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.contact-info h3 { color: var(--primary); margin-bottom: 16px; font-size: 1.2rem; }
+.contact-detail {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: var(--text-light);
+  font-size: 1rem;
+}
+.contact-detail strong { color: var(--text); min-width: 70px; }
+.contact-detail a { color: var(--accent); text-decoration: none; font-weight: 500; }
+.contact-detail a:hover { text-decoration: underline; }
+
+/* Properties */
+.properties-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+.property-link {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: var(--white);
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.property-link:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+.property-link .plat-icon { font-size: 1.5rem; }
+.property-link .plat-name { font-size: 0.85rem; color: var(--text-light); font-weight: 400; }
+
+/* Social Proof */
+.proof-card {
+  background: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: var(--shadow);
+  text-align: center;
+}
+.proof-card p { color: var(--text-light); font-size: 1.1rem; max-width: 700px; margin: 0 auto; }
+.stars { font-size: 1.8rem; margin-bottom: 16px; letter-spacing: 4px; }
+
+/* Footer */
+footer {
+  background: var(--primary);
+  color: rgba(255,255,255,0.6);
+  text-align: center;
+  padding: 32px 24px;
+  font-size: 0.9rem;
+}
+footer a { color: var(--accent-light); text-decoration: none; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2rem; }
+  .hero .tagline { font-size: 1rem; }
+  .mv-grid { grid-template-columns: 1fr; }
+  .contact-card { grid-template-columns: 1fr; }
+  .card { padding: 28px; }
+}
+
+/* Schema */
+.sr-only { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); }
+</style>
+</head>
+<body>
+
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FurnitureStore",
+  "name": "Urban Styles Furniture",
+  "url": "https://furniture-store.shopurbanstyles.com/",
+  "logo": "https://furniture-store.shopurbanstyles.com/logo.png",
+  "description": "Urban Styles Furniture delivers modern furniture, stylish home décor, and dependable support in Indianapolis, IN. Fast. Stylish. Comfort When You Want It Most.",
+  "slogan": "Fast. Stylish. Comfort When You Want It Most.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "8375 Castleton Corner Dr",
+    "addressLocality": "Indianapolis",
+    "addressRegion": "IN",
+    "postalCode": "46250",
+    "addressCountry": "US"
+  },
+  "telephone": "+1-317-578-7770",
+  "email": "info@shopurbanstyles.com",
+  "sameAs": [
+    "https://urbanstylefurniture.blogspot.com/",
+    "https://gravatar.com/urbanstylefurniture",
+    "https://urbanstylefurniture.wordpress.com/",
+    "https://urbanstylefurniture.weebly.com/",
+    "https://urbanstylefurniture.tumblr.com/",
+    "https://www.pinterest.com/furbanstyle/",
+    "https://www.diigo.com/profile/urbanfurniture",
+    "https://bsky.app/profile/urbanfurniture.bsky.social",
+    "https://urbanstylefurniture.postach.io/",
+    "https://www.behance.net/urbanstylefurniture",
+    "https://urbanstylefurniture.mystrikingly.com/",
+    "https://about.me/urbanstylefurniture",
+    "https://www.reddit.com/user/urbanstylefurniture/",
+    "https://medium.com/@furniturestoreurbanstyle",
+    "https://soundcloud.com/urban-styles-furniture",
+    "https://linktr.ee/urbanstylefurniture",
+    "https://www.houzz.com/pro/urbanstylefurniture/__public",
+    "https://sites.google.com/bestlocal.company/urban-style-furniture/home",
+    "https://www.pearltrees.com/urbanstylefurniture",
+    "https://flipboard.com/@UrbanFurniture",
+    "https://lnk.bio/urbanstylefurniture",
+    "https://www.manta.com/c/m1x5v62/urban-styles-furniture",
+    "https://www.foursquare.com/user/1415277960",
+    "https://www.provenexpert.com/urban-styles-furniture/",
+    "https://www.homify.com/professionals/9949610/urban-styles-furniture",
+    "https://homeguide.com/in/fishers/furniture-refinishing/urban-styles-furniture-Us3vwUJSS"
+  ],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Furniture Collections",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Living Room Furniture"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Bedroom Sets"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Dining Collections"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Home Office Furniture"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Mattresses"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Product", "name": "Modern Home Décor"}}
+    ]
+  }
+}
+</script>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-content">
+    <h1>Urban Styles Furniture</h1>
+    <div class="tagline">Fast. Stylish. Comfort When You Want It Most.</div>
+    <p class="subtitle">Modern furniture and exceptional service — helping families across Indianapolis create a home they love.</p>
+    <a href="https://furniture-store.shopurbanstyles.com/" class="hero-cta" rel="noopener">Visit Our Store →</a>
+  </div>
+</header>
+
+<!-- Mission & Vision -->
+<section>
+  <div class="container">
+    <div class="mv-grid">
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>Urban Styles Furniture is committed to helping individuals and families create a home they love. Our mission is to provide high-quality furniture, modern designs, and quick, seamless service—ensuring every customer receives honest guidance, fast delivery options, and a beautiful space that reflects their lifestyle. We work hard to make the shopping experience enjoyable, stress-free, and inspiring from start to finish.</p>
+      </div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>Urban Styles Furniture aims to be the most trusted and design-forward home furnishings destination in the nation—recognized for modern style, exceptional service, transparent communication, and dependable support through every stage of transforming your home.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- UVP -->
+<section style="padding-top:0;">
+  <div class="container">
+    <div class="uvp-card">
+      <h2 class="section-title">What Sets Us Apart</h2>
+      <p style="margin-top:16px;">Urban Styles Furniture delivers unmatched style, comfort, and service. We don't just sell furniture—we help you create your ideal living space. Our team provides curated selections, fast approval on financing, detailed product guidance, and personalized support. At Urban Styles Furniture, customers enjoy a smooth shopping experience guided by professionals who care about quality, comfort, and design.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Story -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Our Story</h2>
+    <div class="card" style="margin-top:16px;">
+      <p>Urban Styles Furniture was built on one belief: your home should be a place of comfort, beauty, and self-expression. Created by a team passionate about design and customer satisfaction, our company provides modern furniture, stylish home décor, and dependable support to help you shape a space you're proud of.</p>
+      <p style="margin-top:16px;">Over the years, families across the region have trusted us to make furnishing their homes easy, enjoyable, and affordable. No pressure. No confusion. Just quality pieces and exceptional service from a brand that cares.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Core Values -->
+<section style="background: var(--white); padding: 60px 0;">
+  <div class="container">
+    <h2 class="section-title">Core Values</h2>
+    <div class="values-grid" style="margin-top:16px;">
+      <div class="value-item">
+        <h4>🎨 Style & Creativity</h4>
+        <p>Thoughtfully designed furniture that elevates everyday living.</p>
+      </div>
+      <div class="value-item">
+        <h4>🤝 Trust & Integrity</h4>
+        <p>Clear communication and honest recommendations.</p>
+      </div>
+      <div class="value-item">
+        <h4>🛋️ Comfort</h4>
+        <p>Products crafted to make your home warm, inviting, and functional.</p>
+      </div>
+      <div class="value-item">
+        <h4>✅ Dependability</h4>
+        <p>Reliable support, easy communication, and consistent service.</p>
+      </div>
+      <div class="value-item">
+        <h4>💡 Guidance</h4>
+        <p>Expert advice to help you choose the perfect pieces for your space.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products & Services -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Products & Services</h2>
+    <div class="products-grid" style="margin-top:16px;">
+      <div class="product-tag"><span class="product-icon">🛋️</span>Living Room Furniture</div>
+      <div class="product-tag"><span class="product-icon">🛏️</span>Bedroom Sets</div>
+      <div class="product-tag"><span class="product-icon">🍽️</span>Dining Collections</div>
+      <div class="product-tag"><span class="product-icon">💻</span>Home Office Furniture</div>
+      <div class="product-tag"><span class="product-icon">😴</span>Mattresses</div>
+      <div class="product-tag"><span class="product-icon">🏠</span>Modern Home Décor</div>
+      <div class="product-tag"><span class="product-icon">💳</span>Flexible Financing</div>
+      <div class="product-tag"><span class="product-icon">🚚</span>Fast Delivery & Pickup</div>
+      <div class="product-tag"><span class="product-icon">🎯</span>Expert Design Guidance</div>
+    </div>
+  </div>
+</section>
+
+<!-- Target Audience -->
+<section style="background: var(--white); padding: 60px 0;">
+  <div class="container">
+    <h2 class="section-title">Who We Serve</h2>
+    <div class="card" style="margin-top:16px;">
+      <ul class="audience-list">
+        <li>Families looking to upgrade their home furnishings</li>
+        <li>Individuals furnishing a new space</li>
+        <li>Homeowners seeking stylish, modern pieces</li>
+        <li>Renters and first-time furniture buyers needing product guidance</li>
+        <li>Anyone wanting a trustworthy furniture store with reliable service</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- Social Proof -->
+<section>
+  <div class="container">
+    <div class="proof-card">
+      <div class="stars">★★★★★</div>
+      <h2 class="section-title" style="display:block; text-align:center;">Trusted by Families Across the Region</h2>
+      <p style="margin-top:24px;">Customers throughout the region trust Urban Styles Furniture for stylish products, transparent pricing, and dependable service. Clients appreciate our friendly team, modern selections, and commitment to helping them create a home they love. With countless satisfied shoppers, we've built a strong reputation for quality, reliability, and exceptional support.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Contact & Properties -->
+<section style="background: var(--white); padding: 60px 0;">
+  <div class="container">
+    <h2 class="section-title">Get in Touch</h2>
+    <div class="contact-card" style="margin-top:16px;">
+      <div class="contact-info">
+        <h3>Business Information</h3>
+        <div class="contact-detail"><strong>Address</strong> 8375 Castleton Corner Dr, Indianapolis, IN 46250</div>
+        <div class="contact-detail"><strong>Phone</strong> <a href="tel:+13175787770">(317) 578-7770</a></div>
+        <div class="contact-detail"><strong>Email</strong> <a href="mailto:info@shopurbanstyles.com">info@shopurbanstyles.com</a></div>
+        <div class="contact-detail"><strong>Website</strong> <a href="https://furniture-store.shopurbanstyles.com/" rel="noopener">shopurbanstyles.com</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Brand Properties - Full Directory -->
+<section>
+  <div class="container">
+    <h2 class="section-title">Brand Properties & Profiles</h2>
+
+    <!-- Websites & Blogs -->
+    <h3 style="color:var(--primary);margin:24px 0 12px;font-size:1.15rem;">🌐 Websites & Blogs</h3>
+    <div class="properties-grid">
+      <a href="https://urbanstylefurniture.wordpress.com/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🌐</span><span>WordPress<br><span class="plat-name">urbanstylefurniture.wordpress.com</span></span></a>
+      <a href="https://urbanstylefurniture.blogspot.com/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📝</span><span>Blogger<br><span class="plat-name">urbanstylefurniture.blogspot.com</span></span></a>
+      <a href="https://urbanstylefurniture.weebly.com/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🌐</span><span>Weebly<br><span class="plat-name">urbanstylefurniture.weebly.com</span></span></a>
+      <a href="https://urbanstylefurniture.tumblr.com/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📓</span><span>Tumblr<br><span class="plat-name">urbanstylefurniture.tumblr.com</span></span></a>
+      <a href="https://urbanstylefurniture.mystrikingly.com/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">⚡</span><span>Strikingly<br><span class="plat-name">urbanstylefurniture.mystrikingly.com</span></span></a>
+      <a href="https://urbanstylefurniture.postach.io/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📮</span><span>Postach.io<br><span class="plat-name">urbanstylefurniture.postach.io</span></span></a>
+      <a href="https://sites.google.com/bestlocal.company/urban-style-furniture/home" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🔷</span><span>Google Sites<br><span class="plat-name">sites.google.com</span></span></a>
+      <a href="https://all4webs.com/urbanstylefurniture/home.htm?12100=43027" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🌐</span><span>All4Webs<br><span class="plat-name">all4webs.com/urbanstylefurniture</span></span></a>
+      <a href="https://medium.com/@furniturestoreurbanstyle" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">✍️</span><span>Medium<br><span class="plat-name">@furniturestoreurbanstyle</span></span></a>
+      <a href="https://justpaste.it/u/urbanfurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📄</span><span>JustPaste.it<br><span class="plat-name">justpaste.it/u/urbanfurniture</span></span></a>
+      <a href="https://writexo.com/share/b7730e0ccd4a" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">✏️</span><span>Writexo<br><span class="plat-name">writexo.com</span></span></a>
+    </div>
+
+    <!-- Social & Community -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">💬 Social & Community</h3>
+    <div class="properties-grid">
+      <a href="https://www.pinterest.com/furbanstyle/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📌</span><span>Pinterest<br><span class="plat-name">pinterest.com/furbanstyle</span></span></a>
+      <a href="https://bsky.app/profile/urbanfurniture.bsky.social" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🦋</span><span>Bluesky<br><span class="plat-name">urbanfurniture.bsky.social</span></span></a>
+      <a href="https://www.reddit.com/user/urbanstylefurniture/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🤖</span><span>Reddit<br><span class="plat-name">u/urbanstylefurniture</span></span></a>
+      <a href="https://soundcloud.com/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🎵</span><span>SoundCloud<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://disqus.com/by/furniturestoreurbanstyle/about/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">💬</span><span>Disqus<br><span class="plat-name">furniturestoreurbanstyle</span></span></a>
+      <a href="https://letterboxd.com/urbanfurniture/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🎬</span><span>Letterboxd<br><span class="plat-name">urbanfurniture</span></span></a>
+      <a href="https://www.ted.com/profiles/50743491" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🎤</span><span>TED<br><span class="plat-name">profiles/50743491</span></span></a>
+      <a href="https://www.kickstarter.com/profile/urbanstylefurniture/about" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🚀</span><span>Kickstarter<br><span class="plat-name">urbanstylefurniture</span></span></a>
+    </div>
+
+    <!-- Profiles & Portfolios -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">👤 Profiles & Portfolios</h3>
+    <div class="properties-grid">
+      <a href="https://gravatar.com/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">👤</span><span>Gravatar<br><span class="plat-name">gravatar.com/urbanstylefurniture</span></span></a>
+      <a href="https://about.me/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🙋</span><span>About.me<br><span class="plat-name">about.me/urbanstylefurniture</span></span></a>
+      <a href="https://www.behance.net/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🎨</span><span>Behance<br><span class="plat-name">behance.net/urbanstylefurniture</span></span></a>
+      <a href="https://500px.com/p/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📷</span><span>500px<br><span class="plat-name">500px.com/urbanstylefurniture</span></span></a>
+      <a href="https://www.skillshare.com/en/profile/Furniture%20Store-Urban%20Style/147266121" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🎓</span><span>Skillshare<br><span class="plat-name">Furniture Store-Urban Style</span></span></a>
+      <a href="https://www.provenexpert.com/urban-styles-furniture/?mode=preview" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">⭐</span><span>ProvenExpert<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.bloglovin.com/@urbanstylesfurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">❤️</span><span>Bloglovin<br><span class="plat-name">@urbanstylesfurniture</span></span></a>
+      <a href="https://serviceprofessionalsnetwork.com/members/urbanstylefurniture/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🔧</span><span>Service Professionals Network<br><span class="plat-name">urbanstylefurniture</span></span></a>
+    </div>
+
+    <!-- Link Hubs -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">🔗 Link Hubs</h3>
+    <div class="properties-grid">
+      <a href="https://linktr.ee/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🌳</span><span>Linktree<br><span class="plat-name">linktr.ee/urbanstylefurniture</span></span></a>
+      <a href="https://lnk.bio/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🔗</span><span>Lnk.bio<br><span class="plat-name">lnk.bio/urbanstylefurniture</span></span></a>
+      <a href="https://start.me/u/rLD948/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏠</span><span>Start.me<br><span class="plat-name">urban-styles-furniture</span></span></a>
+    </div>
+
+    <!-- Bookmarking & Curation -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">📚 Bookmarking & Curation</h3>
+    <div class="properties-grid">
+      <a href="https://www.diigo.com/profile/urbanfurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📑</span><span>Diigo Profile<br><span class="plat-name">diigo.com/profile/urbanfurniture</span></span></a>
+      <a href="https://www.diigo.com/user/urbanfurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📚</span><span>Diigo Library<br><span class="plat-name">diigo.com/user/urbanfurniture</span></span></a>
+      <a href="https://www.instapaper.com/u/folder/5285424/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📰</span><span>Instapaper<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.pearltrees.com/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🌳</span><span>PearlTrees<br><span class="plat-name">urbanstylefurniture</span></span></a>
+      <a href="https://raindrop.io/urbanstylefurniture/urban-styles-furniture-63905060" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">💧</span><span>Raindrop.io<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://flipboard.com/@UrbanFurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📱</span><span>Flipboard<br><span class="plat-name">@UrbanFurniture</span></span></a>
+      <a href="https://alltop.com/my/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🔝</span><span>Alltop<br><span class="plat-name">urbanstylefurniture</span></span></a>
+      <a href="https://www.protopage.com/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📋</span><span>Protopage<br><span class="plat-name">urbanstylefurniture</span></span></a>
+    </div>
+
+    <!-- RSS & Feed Readers -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">📡 RSS & Feed Readers</h3>
+    <div class="properties-grid">
+      <a href="https://follow.it/furniture-store-shopurbanstyles-com" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">➕</span><span>Follow.it<br><span class="plat-name">shopurbanstyles.com</span></span></a>
+      <a href="https://newsblur.com/site/9847198/furniturestore.shopurbanstyles.com" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📰</span><span>NewsBlur<br><span class="plat-name">shopurbanstyles.com</span></span></a>
+      <a href="https://www.inoreader.com/stream/user/1003576064/tag/Urban%20Styles%20Furniture/view/html?cs=m" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📖</span><span>Inoreader<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+      <a href="https://feedly.com/i/subscription/feed%2Fhttps%3A%2F%2Ffurniture-store.shopurbanstyles.com%2Ffeed%2F" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🟢</span><span>Feedly<br><span class="plat-name">shopurbanstyles.com/feed</span></span></a>
+      <a href="https://theoldreader.com/profile/urbanstylefurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📜</span><span>The Old Reader<br><span class="plat-name">urbanstylefurniture</span></span></a>
+    </div>
+
+    <!-- Notes & Productivity -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">📝 Notes & Productivity</h3>
+    <div class="properties-grid">
+      <a href="https://share.evernote.com/note/7c86464a-9932-68ba-4949-cc04cb6e6e38" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🐘</span><span>Evernote<br><span class="plat-name">Shared Note</span></span></a>
+      <a href="https://1drv.ms/o/c/6fc0554b9222eeb0/IgCOVwr9Y0VdQ5hVVUcAytRFATw-CtYfmWuLQXDenj1isrQ?e=o6MJrC" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📓</span><span>OneNote<br><span class="plat-name">Microsoft OneNote</span></span></a>
+      <a href="https://www.toodledo.com/public/td692ff7b1223bf/0/0/list.html" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">✅</span><span>Toodledo<br><span class="plat-name">Task List</span></span></a>
+      <a href="https://trello.com/b/zW16ws6p/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📋</span><span>Trello Board<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://trello.com/w/urbanfurniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📋</span><span>Trello Workspace<br><span class="plat-name">urbanfurniture</span></span></a>
+      <a href="https://www.dropbox.com/home/Urban%20Styles%20Furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📦</span><span>Dropbox<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+    </div>
+
+    <!-- Citations & Business Directories -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">📍 Citations & Business Directories</h3>
+    <div class="properties-grid">
+      <a href="https://www.manta.com/c/m1x5v62/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📍</span><span>Manta<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.brownbook.net/business/54561629/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📕</span><span>Brownbook<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.tupalo.co/indian-lake-indiana/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📍</span><span>Tupalo<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.callupcontact.com/b/businessprofile/Urban_Styles_Furniture/9896342" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📞</span><span>CallUpContact<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+      <a href="https://citysquares.com/b/urban-styles-furniture-indianapolis-5125613" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏙️</span><span>CitySquares<br><span class="plat-name">Indianapolis</span></span></a>
+      <a href="https://app.foursquare.com/user/1415277960" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📍</span><span>Foursquare<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+      <a href="https://us.enrollbusiness.com/BusinessProfile/7659600/Urban%20Styles%20Furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📋</span><span>EnrollBusiness<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+      <a href="https://www.cityfos.com/company/Urban-Styles-Furniture-in-Indianapolis-IN-23150259.htm" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏢</span><span>Cityfos<br><span class="plat-name">Indianapolis, IN</span></span></a>
+      <a href="http://www.place123.net/place/urban-styles-furniture-indianapolis-usa" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📍</span><span>Place123<br><span class="plat-name">Indianapolis, USA</span></span></a>
+      <a href="https://ottawa.cataloxy.com/firms/furniture-store.shopurbanstyles.com.htm" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📇</span><span>Cataloxy<br><span class="plat-name">shopurbanstyles.com</span></span></a>
+      <a href="https://indiana.bizhwy.com/urban-styles-furniture-id13904.php" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🛣️</span><span>BizHwy<br><span class="plat-name">Indiana</span></span></a>
+      <a href="https://www.startus.cc/company/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🚀</span><span>StartUs<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.bizoforce.com/business-directory/urban-styles-furniture/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">💼</span><span>BizoForce<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://freebusinessdirectory.com//search_res_show.php?co=650657" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📂</span><span>Free Business Directory<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+    </div>
+
+    <!-- Home & Contractor Directories -->
+    <h3 style="color:var(--primary);margin:32px 0 12px;font-size:1.15rem;">🏠 Home & Contractor Directories</h3>
+    <div class="properties-grid">
+      <a href="https://pro.porch.com/indianapolis-in/custom-furniture-builders/urban-styles-furniture-167520488/pp" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏠</span><span>Porch<br><span class="plat-name">Indianapolis, IN</span></span></a>
+      <a href="https://www.houzz.com/pro/urbanstylefurniture/__public" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏡</span><span>Houzz<br><span class="plat-name">urbanstylefurniture</span></span></a>
+      <a href="http://www.click4homeservices.com/indianapolis/remodeling-service/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🔨</span><span>Click4HomeServices<br><span class="plat-name">Indianapolis</span></span></a>
+      <a href="https://www.bark.com/en/us/company/urban-styles-furniture/ZlwobQ/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🐕</span><span>Bark<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.homify.com/professionals/9949610/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏠</span><span>Homify<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://indiana.construction-us.org/1061915-urban_styles_furniture.htm" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏗️</span><span>Construction-US<br><span class="plat-name">Indiana</span></span></a>
+      <a href="https://www.buildzoom.com/contractor/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🔍</span><span>BuildZoom<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.usahomeplus.com/indianapolis/home-furniture-center/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🇺🇸</span><span>USAHomePlus<br><span class="plat-name">Indianapolis</span></span></a>
+      <a href="https://www.contractors.directory/indianapolis/contractors/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📋</span><span>Contractors Directory<br><span class="plat-name">Indianapolis</span></span></a>
+      <a href="https://indiana.building-material.org/212698-urban_styles_furniture.htm" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🧱</span><span>Building-Material<br><span class="plat-name">Indiana</span></span></a>
+      <a href="https://www.gradedtradesmen.com/indianapolis/tradesmen/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">⭐</span><span>Graded Tradesmen<br><span class="plat-name">Indianapolis</span></span></a>
+      <a href="http://homeservicezz.com/directory/listingdisplay.aspx?lid=95330" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏠</span><span>HomeServicezz<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+      <a href="https://homebusinessexpo.com/listing/urban-styles-furniture.html" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏢</span><span>Home Business Expo<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="http://homeizze.com/directory/listingdisplay.aspx?lid=62297" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏠</span><span>Homeizze<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+      <a href="https://www.home8.org/IN/Indianapolis/Urban-Styles-Furniture-Indianapolis/" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏠</span><span>Home8<br><span class="plat-name">Indianapolis</span></span></a>
+      <a href="https://homeguide.com/in/fishers/furniture-refinishing/urban-styles-furniture-Us3vwUJSS" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">📖</span><span>HomeGuide<br><span class="plat-name">Fishers, IN</span></span></a>
+      <a href="http://homerepairzz.com/directory/listingdisplay.aspx?lid=93006" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🔧</span><span>HomeRepairzz<br><span class="plat-name">Urban Styles Furniture</span></span></a>
+      <a href="https://thebuildermarket.com/pros/urban-styles-furniture-dv5shkhl" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏗️</span><span>The Builder Market<br><span class="plat-name">urban-styles-furniture</span></span></a>
+      <a href="https://www.homepros411.com/indianapolis/urban-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🏠</span><span>HomePros411<br><span class="plat-name">Indianapolis</span></span></a>
+      <a href="https://www.meetyourmarkets.com/indianapolis/urban-styles-furniture" class="property-link" rel="noopener" target="_blank"><span class="plat-icon">🤝</span><span>Meet Your Markets<br><span class="plat-name">Indianapolis</span></span></a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Urban Styles Furniture. All rights reserved. | <a href="https://furniture-store.shopurbanstyles.com/">shopurbanstyles.com</a></p>
+</footer>
+
+</body>
+</html>
